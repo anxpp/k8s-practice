@@ -121,7 +121,7 @@ journalctl -xefu kubelet
 - 初始化master
 
 ```
-bukeadm -v
+kubeadm -v
 kubeadm init --kubernetes-version v1.23.5 --image-repository registry.aliyuncs.com/google_containers --pod-network-cidr=192.168.0.0/16
 ```
 
