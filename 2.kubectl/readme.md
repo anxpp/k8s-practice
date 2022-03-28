@@ -92,43 +92,117 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 | version      |                                                                                                                                  | 打印系统的版本信息                                                             |
 | wait         |                                                                                                                                  | 等待一个或多个资源上的特定条件                                                       |
 
-
 ### kubectl 可操作的资源对象
 
-| 资源对象类型                        | 缩写     | 所属API组 | 受限于命名空间 | 类型（Kind）        |
-|-------------------------------|--------|--------|:-------:|-----------------|
-| bindings                      |        |        |   yes   | Binging         |
-| componentstatuses             | cs     |        |   no    | ComponentStatus |
-| configmaps                    | cm     |        |   yes   | ConfigMap       |
-| endpoints                     | ep     |        |         | EndPoints       |
-| events                        | ev     |        |         | Event           |
-| limitranges                   | limits |        |         | LimitRange      |
-| namespaces                    | ns     |        |         |                 |
-| nodes                         | no     |        |         |                 |
-| persistentvolumeclaims        | pvc    |        |         |                 |
-| persistentvolumes             | pv     |        |         |                 |
-| pods                          | po     |        |         |                 |
-| podtemplates                  |        |        |         |                 |
-| replicationcontrollers        | rc     |        |         |                 |
-| resourcequotas                | quota  |        |         |                 |
-| secrets                       |        |        |         |                 |
-| serviceaccounts               | sa     |        |         |                 |
-| services                      | svc    |        |         |                 |
-| mutatingwebhookconfigurations |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
-|                               |        |        |         |                 |
+| 资源对象类型                          | 缩写     | 所属API组 | 受限于命名空间 | 类型（Kind）        | 说明  |
+|---------------------------------|--------|--------|:-------:|-----------------|-----|
+| bindings                        |        |        |   yes   | Binging         |     |
+| componentstatuses               | cs     |        |   no    | ComponentStatus |     |
+| configmaps                      | cm     |        |   yes   | ConfigMap       |     |
+| endpoints                       | ep     |        |         | EndPoints       |     |
+| events                          | ev     |        |         | Event           |     |
+| limitranges                     | limits |        |         | LimitRange      |     |
+| namespaces                      | ns     |        |         |                 |     |
+| nodes                           | no     |        |         |                 |     |
+| persistentvolumeclaims          | pvc    |        |         |                 |     |
+| persistentvolumes               | pv     |        |         |                 |     |
+| pods                            | po     |        |         |                 |     |
+| podtemplates                    |        |        |         |                 |     |
+| replicationcontrollers          | rc     |        |         |                 |     |
+| resourcequotas                  | quota  |        |         |                 |     |
+| secrets                         |        |        |         |                 |     |
+| serviceaccounts                 | sa     |        |         |                 |     |
+| services                        | svc    |        |         |                 |     |
+| mutatingwebhookconfigurations   |        |        |         |                 |     |
+| validatingwebhookconfigurations |        |        |         |                 |     |
+| customresourcedefinitions       |        |        |         |                 |     |
+| apiservices                     |        |        |         |                 |     |
+| controllerrevisions             |        |        |         |                 |     |
+| daemonsets                      |        |        |         |                 |     |
+| deployments                     |        |        |         |                 |     |
+| replicasets                     |        |        |         |                 |     |
+| statefulsets                    |        |        |         |                 |     |
+| tokenviews                      |        |        |         |                 |     |
+| localsubjectaccessreviews       |        |        |         |                 |     |
+| selfsubjectaccessreviews        |        |        |         |                 |     |
+| selfsubjectrulereviews          |        |        |         |                 |     |
+| subjectaccessreviews            |        |        |         |                 |     |
+| horizontalpodautoscalers        |        |        |         |                 |     |
+| cronjobs                        |        |        |         |                 |     |
+| jobs                            |        |        |         |                 |     |
+| certificatesigningrequests      |        |        |         |                 |     |
+| leases                          |        |        |         |                 |     |
+| endpointslices                  |        |        |         |                 |     |
+| flowschemas                     |        |        |         |                 |     |
+| prioritylevelconfigurations     |        |        |         |                 |     |
+| ingressclasses                  |        |        |         |                 |     |
+| ingresses                       |        |        |         |                 |     |
+| networkpolicies                 |        |        |         |                 |     |
+| runtimeclasses                  |        |        |         |                 |     |
+| poddisruptionbudgets            |        |        |         |                 |     |
+| podsecuritypolicies             |        |        |         |                 |     |
+| clusterroles                    |        |        |         |                 |     |
+| rolebindings                    |        |        |         |                 |     |
+| roles                           |        |        |         |                 |     |
+| priorityclasses                 |        |        |         |                 |     |
+| csidrivers                      |        |        |         |                 |     |
+| csinodes                        |        |        |         |                 |     |
+| storageclasses                  |        |        |         |                 |     |
+| volumeattachments               |        |        |         |                 |     |
+
+### kubectl 公共参数说明
+
+--参数名=取值
+
+| 参数名及示例                           | 取值  | 说明                          |
+|----------------------------------|-----|-----------------------------|
+| --dd-dir-header=false            |     |                             |
+| --alsologtostderr=false          |     |                             |
+| --as=''                          |     |                             |
+| --as-group                       |     |                             |
+| --cache-dir='/root/,kube/cache'  |     |                             |
+| --certificate-authority=''       |     |                             |
+| --client-key=''                  |     |                             |
+| --cluster=''                     |     |                             |
+| --context=''                     |     |                             |
+| --insecure-skip-tls-verify=false |     |                             |
+| --kubeconfig=''                  |     |                             |
+| --log-backtrace-at=:0            |     |                             |
+| --log-dir=''                     |     |                             |
+| --log-file=''                    |     |                             |
+| --log-file-max-size=1800         |     |                             |
+| --log-flush-frequency=5s         |     |                             |
+| --logtostderr=true               |     |                             |
+| --match-server-version=false     |     |                             |
+| -n, --namespace=''               |     |                             |
+| --password=''                    |     |                             |
+| --profile='none'                 |     |                             |
+| --profile-output='profile.pprof' |     |                             |
+| --request-timeout='0'            |     |                             |
+| -s, --server=''                  |     |                             |
+| --skip-headers=false             |     |                             |
+| --skip-log-headers=false         |     |                             |
+| --stderrthreshold=2              |     |                             |
+| --tls-server-name=''             |     |                             |
+| --token=''                       |     |                             |
+| --username=''                    |     |                             |
+| --user=''                        |     |                             |
+| --v=0                            |     |                             |
+| --vmodule=                       |     |                             |
+| --warnings-as-errors=false       |     | 将warning视为error，以非0的退出码直接退出 |
+
+### kubectl 格式化输出
+
+| 格式                                | 说明                           |
+|-----------------------------------|------------------------------|
+| -o custom-columns=<spec>          | 根据自定义列名进行输出，以逗号分割            |
+| -o custom-columns-file=<filename> | 设置自定义列明的配置文件名称               |
+| -o json                           | 以JSON格式显示结果                  |
+| -o jsonpath=<template>            | 输出jsonpath表达式定义的字段信息         |
+| -o jsonpath-file=<filename>       | 输出jsonpath表达式定义的字段信息，来源于文件   |
+| -o name                           | 仅输出资源对象的名称                   |
+| -o wide                           | 输出额外信息。对于Pod，将输出Pod所在的Node名称 |
+| -o yaml                           | 以yaml格式显示结果                  |
 
 
+### kubectl 常用操作示例
