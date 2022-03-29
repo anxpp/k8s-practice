@@ -161,6 +161,15 @@ source ~/.bash_profile
 kubectl apply -f  https://projectcalico.docs.tigera.io/manifests/calico.yaml
 ```
 
+## 参考
+
+https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/
+
+https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
+https://kubernetes.io/zh/docs/reference/setup-tools/kubeadm/kubeadm-init/
 
 
 
