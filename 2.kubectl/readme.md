@@ -191,9 +191,8 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 | --vmodule=                       |     |                             |
 | --warnings-as-errors=false       |     | 将warning视为error，以非0的退出码直接退出 |
 
-    
+
 ### kubectl 格式化输出
-    
 
 | 格式                              | 说明                           |
 |-----------------------------------|--------------------------------------------|
@@ -209,8 +208,8 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 
 
 ### kubectl 常用操作示例
-    
+
 ## 参考
-    
+
     https://kubernetes.io/zh/docs/reference/kubectl/overview/
     https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
