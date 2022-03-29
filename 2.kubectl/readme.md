@@ -198,8 +198,8 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 | -o custom-columns=<spec>          | 根据自定义列名进行输出，以逗号分割            |
 | -o custom-columns-file=<filename> | 设置自定义列明的配置文件名称               |
 | -o json                           | 以JSON格式显示结果                  |
-| -o jsonpath=<template>            | 输出jsonpath表达式定义的字段信息         |
-| -o jsonpath-file=<filename>       | 输出jsonpath表达式定义的字段信息，来源于文件   |
+| -o jsonpath=<template>            | 输出jsonpath表达式定义的字段信息          |
+| -o jsonpath-file=<filename>       | 输出jsonpath表达式定义的字段信息，来源于文件    |
 | -o name                           | 仅输出资源对象的名称                   |
 | -o wide                           | 输出额外信息。对于Pod，将输出Pod所在的Node名称 |
 | -o yaml                           | 以yaml格式显示结果                  |
