@@ -191,10 +191,12 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 | --vmodule=                       |     |                             |
 | --warnings-as-errors=false       |     | 将warning视为error，以非0的退出码直接退出 |
 
+    
 ### kubectl 格式化输出
+    
 
 | 格式                              | 说明                           |
-|-----------------------------------|------------------------------|
+|-----------------------------------|--------------------------------------------|
 | -o custom-columns=<spec>          | 根据自定义列名进行输出，以逗号分割          |
 | -o custom-columns-file=<filename> | 设置自定义列明的配置文件名称               |
 | -o json                           | 以JSON格式显示结果                  |
@@ -203,6 +205,7 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 | -o name                           | 仅输出资源对象的名称                   |
 | -o wide                           | 输出额外信息。对于Pod，将输出Pod所在的Node名称 |
 | -o yaml                           | 以yaml格式显示结果                  |
+
 
 
 ### kubectl 常用操作示例
