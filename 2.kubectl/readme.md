@@ -209,3 +209,8 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 
 
 ### kubectl 常用操作示例
+    
+## 参考
+    
+    https://kubernetes.io/zh/docs/reference/kubectl/overview/
+    https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
