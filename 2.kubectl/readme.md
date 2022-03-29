@@ -193,7 +193,7 @@ kubectl create -f pod1.yaml -f rc1.yaml -f svc1.yaml
 
 ### kubectl 格式化输出
 
-| 格式                                | 说明                           |
+| 格式                              | 说明                           |
 |-----------------------------------|------------------------------|
 | -o custom-columns=<spec>          | 根据自定义列名进行输出，以逗号分割            |
 | -o custom-columns-file=<filename> | 设置自定义列明的配置文件名称               |
